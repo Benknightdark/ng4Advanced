@@ -12,6 +12,7 @@ import { DashboardsComponent } from './dashboards/dashboards.component';
 import { CardsComponent } from './cards/cards.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { LoginGuard } from "app/login.guard";
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { LayoutComponent } from './layout/layout.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

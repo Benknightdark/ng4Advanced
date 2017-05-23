@@ -8,13 +8,13 @@ import { DashboardsComponent } from "app/dashboards/dashboards.component";
 import { CardsComponent } from "app/cards/cards.component";
 import { LayoutComponent } from "app/layout/layout.component";
 import { LoginComponent } from "app/login/login.component";
+import { LoginGuard } from "app/login.guard";
 
 const routes: Routes = [
   {
     path: "", component: LayoutComponent, children: [
-
       { path: 'dashboard', component: DashboardsComponent },
-      { path: 'cards/:type', component: CardsComponent },
+      { path: 'cards/:type', component: CardsComponent ,canActivate:[LoginGuard]},
       { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
     ]
   },
