@@ -10,7 +10,7 @@ import { Page2Component } from './page2/page2.component';
 import { ErrorComponent } from './error/error.component';
 import { DashboardsComponent } from './dashboards/dashboards.component';
 import { CardsComponent } from './cards/cards.component';
-import { FlotComponent } from './charts/flot/flot.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { FlotComponent } from './charts/flot/flot.component';
     ErrorComponent,
     DashboardsComponent,
     CardsComponent,
-    FlotComponent
+
   ],
   imports: [
     BrowserModule,

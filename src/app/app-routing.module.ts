@@ -6,15 +6,11 @@ import { ErrorComponent } from "app/error/error.component";
 import { fallbackRoute } from "app/share/fallback-route";
 import { DashboardsComponent } from "app/dashboards/dashboards.component";
 import { CardsComponent } from "app/cards/cards.component";
-import { FlotComponent } from "app/charts/flot/flot.component";
 
  const routes: Routes = [
    { path: 'dashboard', component: DashboardsComponent },
     { path: 'cards/:type', component: CardsComponent },
-    { path: 'charts', children: [
-       { path: '', component: FlotComponent },
-      { path: 'flot', component: FlotComponent }
-      ] },
+    { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
        fallbackRoute
      ];
 @NgModule({
