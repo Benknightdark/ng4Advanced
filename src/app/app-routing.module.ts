@@ -10,7 +10,7 @@ import { FlotComponent } from "app/charts/flot/flot.component";
 
  const routes: Routes = [
    { path: 'dashboard', component: DashboardsComponent },
-    { path: 'cards', component: CardsComponent },
+    { path: 'cards/:type', component: CardsComponent },
     { path: 'charts', children: [
        { path: '', component: FlotComponent },
       { path: 'flot', component: FlotComponent }

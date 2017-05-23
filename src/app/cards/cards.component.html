@@ -1,7 +1,9 @@
+
  <!-- Page content-->
         <section>
           <div class="container container-lg">
             <div class="row">
+
               <div class="col-lg-8 col-xs-12">
                 <div class="row">
                   <div class="col-sm-6 col-xs-12">
@@ -17,15 +19,15 @@
                           </ul>
                         </div>
                         <!-- END dropdown-->
-                        <div class="card-title">Paracosm</div>
+                        <div class="card-title">{{ typename}}</div>
                       </div>
                       <div class="card-body">
                         <p>Nulla egestas faucibus tincidunt.</p>
                         <p class="m0"><a href="#"><img src="assets/img/pic1.jpg" alt="Pic" class="mr-sm thumb48"></a><a href="#"><img src="assets/img/pic2.jpg" alt="Pic" class="mr-sm thumb48"></a><a href="#"><img src="assets/img/pic3.jpg" alt="Pic" class="mr-sm thumb48"></a><a href="#"><img src="assets/img/pic4.jpg" alt="Pic" class="mr-sm thumb48"></a></p>
                       </div>
                       <div class="card-footer">
-                        <button type="button" class="btn btn-flat btn-default">Action 1</button>
-                        <button type="button" class="btn btn-flat btn-default">Action 2</button>
+                        <button type="button" class="btn btn-flat btn-default" (click)="OnPlus()">+ 1</button>
+                        <button type="button" class="btn btn-flat btn-default" (click)="OnMinus()">- 1</button>
                       </div>
                     </div>
                   </div>
