@@ -2,12 +2,9 @@
   {{title}}
 </h1>
 <ul>
-  <li><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
->Home</a></li>
-    <li><a [routerLink]="['page1']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
->page1</a></li>
-  <li><a [routerLink]="['page2']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
->Page2</a></li>
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a  [routerLink]="['/']" >Home</a></li>
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a i  [routerLink]="['page1']">page1</a></li>
+  <li  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['page2']">Page2</a></li>
 </ul>
 
 <!-->路由插座</!-->
