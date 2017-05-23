@@ -10,6 +10,8 @@ import { Page2Component } from './page2/page2.component';
 import { ErrorComponent } from './error/error.component';
 import { DashboardsComponent } from './dashboards/dashboards.component';
 import { CardsComponent } from './cards/cards.component';
+import { LoginComponent } from './login/login.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { CardsComponent } from './cards/cards.component';
     ErrorComponent,
     DashboardsComponent,
     CardsComponent,
+    LoginComponent,
+    LayoutComponent,
 
   ],
   imports: [
