@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'page1', component: Page1Component},
   {path: 'page2', component: Page2Component},
  fallbackRoute
-//{ path: '**', redirectTo: '/', pathMatch: 'full' }
+//{ path: '**', component:ErrorComponent}
 ];
 
 @NgModule({
