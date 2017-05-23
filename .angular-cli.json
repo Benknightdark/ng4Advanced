@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "dashboard.html",
-        "carts.html",
+        "cards.html",
         "flot.html",
         "login.html",
         "assets",
