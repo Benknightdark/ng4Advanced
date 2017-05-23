@@ -6,12 +6,19 @@ import { ErrorComponent } from "app/error/error.component";
 import { fallbackRoute } from "app/share/fallback-route";
 import { DashboardsComponent } from "app/dashboards/dashboards.component";
 import { CardsComponent } from "app/cards/cards.component";
+import { FlotComponent } from "app/charts/flot/flot.component";
 
  const routes: Routes = [
    { path: 'dashboard', component: DashboardsComponent },
-    { path: 'cards', component: CardsComponent }, fallbackRoute ];
+    { path: 'cards', component: CardsComponent },
+    { path: 'charts', children: [
+       { path: '', component: FlotComponent },
+      { path: 'flot', component: FlotComponent }
+      ] },
+       fallbackRoute
+     ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true,enableTracing: false})],
+  imports: [RouterModule.forRoot(routes,{useHash:false,enableTracing: false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
