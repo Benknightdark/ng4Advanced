@@ -11,7 +11,7 @@ export class DashboardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $(initDashboard)
+    $(initDashboard);
   }
 
 }
