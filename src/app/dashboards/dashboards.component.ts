@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { initDashboard } from "app/share/init-dashboard";
 
 @Component({
   selector: 'app-dashboards',
@@ -10,6 +11,7 @@ export class DashboardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(initDashboard)
   }
 
 }
