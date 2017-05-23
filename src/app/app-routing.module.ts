@@ -26,7 +26,7 @@ const routes: Routes = [
     useHash: false
 
     , enableTracing: false,
-    // preloadingStrategy: PreloadAllModules
+     preloadingStrategy: PreloadAllModules
 
   })],
   exports: [RouterModule]
