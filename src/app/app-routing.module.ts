@@ -8,7 +8,7 @@ import { fallbackRoute } from "app/share/fallback-route";
 const routes: Routes = [
 {path: '',redirectTo:'/page1',pathMatch: 'full' },
 
-  {path: 'page1', component: Page1Component},
+  {path: 'page1', component: Page1Component,data:{title:'page21'}},
   {path: 'page2', component: Page2Component},
  fallbackRoute
 //{ path: '**', component:ErrorComponent}
