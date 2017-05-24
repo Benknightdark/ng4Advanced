@@ -14,9 +14,7 @@ export class LoginService {
     return this.http.post(this._url, JSON.stringify(LoginData), this.JSONoptions)
       .map((res: Response) => {
         let token = res.json() && res.json().token;
-        console.log(token)
         if (token) {
-          console.log(token)
           localStorage.setItem('token', JSON.stringify({ username: LoginData.Username, token: token }));
 
           return true;
