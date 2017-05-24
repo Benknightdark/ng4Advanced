@@ -12,20 +12,16 @@ export class LoginService {
   constructor(private http: Http, private router: Router) { }
   // tslint:disable-next-line:member-ordering
   JSONoptions = new RequestOptions({ headers: new Headers({ 'Content-Type': 'application/json;charset=utf-8' }) });
-
-   // tslint:disable-next-line:member-ordering
-   _url = 'http://192.168.137.1:88/api/token'
+  // tslint:disable-next-line:member-ordering
+  _url = 'http://192.168.137.1:88/api/token'
   Login(LoginData: LoginModel): Observable<boolean> {
     return this.http.post(this._url, JSON.stringify(LoginData), this.JSONoptions)
       .map((res: Response) => {
         const token = res.json() && res.json().token;
         if (token) {
           localStorage.setItem('token', JSON.stringify({ username: LoginData.Username, token: token }));
-
           return true;
         } else {
-          console.log('false')
-
           return false;
         }
       }
