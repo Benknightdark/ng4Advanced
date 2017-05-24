@@ -13,6 +13,7 @@ import { CardsComponent } from './cards/cards.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginGuard } from "app/login.guard";
+import { LoginService } from "app/service/login.service";
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { LoginGuard } from "app/login.guard";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [LoginGuard],
+  providers: [LoginGuard,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

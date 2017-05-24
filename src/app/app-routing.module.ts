@@ -13,9 +13,10 @@ import { LoginGuard } from "app/login.guard";
 const routes: Routes = [
   {
     path: "", component: LayoutComponent, children: [
-      { path: 'dashboard', component: DashboardsComponent },
-      { path: 'cards/:type', component: CardsComponent ,canActivate:[LoginGuard]},
-      { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
+      { path: '', component: DashboardsComponent, canActivate: [LoginGuard] },
+      { path: 'dashboard', component: DashboardsComponent, canActivate: [LoginGuard] },
+      { path: 'cards/:type', component: CardsComponent, canActivate: [LoginGuard] },
+      { path: 'charts', loadChildren: './charts/charts.module#ChartsModule',canActivate: [LoginGuard] },
     ]
   },
   { path: 'login', component: LoginComponent },
@@ -23,10 +24,10 @@ const routes: Routes = [
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    useHash: false
+    useHash: true
 
     , enableTracing: false,
-     preloadingStrategy: PreloadAllModules
+    preloadingStrategy: PreloadAllModules
 
   })],
   exports: [RouterModule]

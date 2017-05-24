@@ -15,8 +15,13 @@
           <ul class="dropdown-menu dropdown-menu-right md-dropdown-menu">
             <li><a href="profile.html"><em class="ion-home icon-fw"></em>Profile</a></li>
             <li><a href="messages.html"><em class="ion-gear-a icon-fw"></em>Messages</a></li>
-            <li role="presentation" class="divider"></li>
-            <li><a href="user.login.html"><em class="ion-log-out icon-fw"></em>Logout</a></li>
+            <li (click)="OnClick()">
+                <a href="javascript:void(0)" >
+             <em class="ion-log-out icon-fw"></em>
+                logout
+              </a>
+
+            </li>
           </ul>
         </li>
         <li><a id="header-settings" href="#" class="ripple"><em class="ion-gear-b"></em></a></li>
@@ -38,7 +43,7 @@
         <ul>
           <li><a [routerLink]="['/dashboard']" class="ripple"><span class="pull-right nav-label"><span class="badge bg-success">2</span></span><span class="nav-icon"><img src="" data-svg-replace="assets/img/icons/aperture.svg" alt="MenuItem" class="hidden"></span><span>Dashboard</span></a></li>
           <li><a [routerLink]="['/cards',100]" class="ripple"><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="assets/img/icons/radio-waves.svg" alt="MenuItem" class="hidden"></span><span>Cards</span></a></li>
-          <li><a href="#" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="assets/img/icons/connection-bars.svg" alt="MenuItem" class="hidden"></span><span>Charts</span></a>
+          <li><a [routerLink]="['/charts/flot']" class="ripple"><span class="pull-right nav-caret"><em class="ion-ios-arrow-right"></em></span><span class="pull-right nav-label"></span><span class="nav-icon"><img src="" data-svg-replace="assets/img/icons/connection-bars.svg" alt="MenuItem" class="hidden"></span><span>Charts</span></a>
             <ul class="sidebar-subnav">
               <li><a [routerLink]="['/charts/flot']" class="ripple"><span class="pull-right nav-label"></span><span>Flot</span></a></li>
               <li><a href="radial.html" class="ripple"><span class="pull-right nav-label"></span><span>Radial</span></a></li>
@@ -345,4 +350,3 @@
     </div>
   </div>
 </div>
-
